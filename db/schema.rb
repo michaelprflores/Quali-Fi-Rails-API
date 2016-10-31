@@ -10,9 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20161031154150) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "openings", force: :cascade do |t|
+    t.string  "opening_name"
+    t.string  "skills"
+    t.string  "education"
+    t.integer "years_exp"
+    t.boolean "local"
+  end
 
 end
