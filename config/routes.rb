@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'openings#index'
-  resources :opening
-  resources :applicant
+  root to: 'welcome#index'
+  resources :openings
+  resources :applicants
 end
