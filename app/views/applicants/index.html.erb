@@ -1,0 +1,11 @@
+<nav>
+  <ul>
+    <li><%= link_to "Back to Home", root_path %></li>
+  </ul>
+</nav>
+<h1>All Applicants</h1>
+<ul>
+  <% @applicants.each do |applicant| %>
+    <li><%= link_to applicant.name, applicant %></li>
+  <% end %>
+</ul>

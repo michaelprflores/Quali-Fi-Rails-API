@@ -1,0 +1,13 @@
+<nav>
+  <ul>
+    <li><%= link_to "Back to All Applicants", openings_path %></li>
+  </ul>
+</nav>
+
+<h1><%= @opening.opening_name %></h1>
+<ul>
+  <li><%= @opening.skills %></li>
+  <li><%= @opening.education %></li>
+  <li><%= @opening.years_exp %></li>
+  <li><%= @opening.local %></li>
+</ul>

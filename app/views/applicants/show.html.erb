@@ -1,0 +1,13 @@
+<nav>
+  <ul>
+    <li><%= link_to "Back to All Applicants", applicants_path %></li>
+  </ul>
+</nav>
+
+<h1><%= @applicant.name %></h1>
+<ul>
+  <li><%= @applicant.skills %></li>
+  <li><%= @applicant.education %></li>
+  <li><%= @applicant.years_exp %></li>
+  <li><%= @applicant.local %></li>
+</ul>
