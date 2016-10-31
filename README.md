@@ -8,5 +8,6 @@ Setup (progressions)
 
 Write the tables by writing recipes aka migrations
 1. Determine ERD 
-2. Run `rails g migration create_openings`
+2. Run `rails g migration create_things`
+3. write the table data
 
