@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161031171527) do
+ActiveRecord::Schema.define(version: 20161031182505) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,13 @@ ActiveRecord::Schema.define(version: 20161031171527) do
     t.string  "education"
     t.integer "years_exp"
     t.boolean "local"
+  end
+
+  create_table "openings_applicants", id: false, force: :cascade do |t|
+    t.integer "opening_id"
+    t.integer "applicant_id"
+    t.index ["applicant_id"], name: "index_openings_applicants_on_applicant_id", using: :btree
+    t.index ["opening_id"], name: "index_openings_applicants_on_opening_id", using: :btree
   end
 
 end
