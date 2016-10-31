@@ -1,0 +1,7 @@
+<ul>
+  <% @openings.each do |opening| %>
+    <li>
+      <%= link_to opening.opening_name, opening %>
+    </li>
+  <% end %>
+</ul>

@@ -9,6 +9,9 @@ Setup (progressions for Rails)
 7. run `rails g migration create_things`
 8. write the table data in the migrations file
 9. write some seed data
-10. create the models in the models folder
+10. create the models in the models folder and define the relationships
 11. run `rails db:migrate`
-12. run `rails db:seed`
+12. run `rails db:seed
+
+
+1. 
