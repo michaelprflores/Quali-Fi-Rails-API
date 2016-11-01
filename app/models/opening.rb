@@ -1,3 +1,4 @@
 class Opening < ActiveRecord::Base
-  has_and_belongs_to_many :applicants
+  has_many :openings_applicants
+  has_many :applicants, through: :openings_applicants
 end
