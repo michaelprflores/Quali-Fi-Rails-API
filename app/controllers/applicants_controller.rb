@@ -20,11 +20,11 @@ class ApplicantsController < ApplicationController
   def destroy
     @applicant = Applicant.find(params[:id])
     @applicant.destroy
-    redirect_to openings_path
+    redirect_to applicants_path
   end
 
   def create
-    @applicant = Applicant.create(opening_params)
+    @applicant = Applicant.create(applicant_params)
     redirect_to @applicant
   end
 
@@ -38,13 +38,13 @@ class ApplicantsController < ApplicationController
 
   def update
     @applicant = Applicant.find(params[:id])
-    @applicant.update(opening_params)
+    @applicant.update(applicant_params)
     redirect_to @applicant
   end
 
   private
 
-  def opening_params
+  def applicant_params
     params.require(:applicant).permit(:name, :skills, :education, :years_exp, :local)
   end
 

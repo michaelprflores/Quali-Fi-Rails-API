@@ -4,8 +4,19 @@
   </ul>
 </nav>
 <h1>All Applicants</h1>
+<%= link_to "new applicant", new_applicant_path %>
 <ul>
   <% @applicants.each do |applicant| %>
-    <li><%= link_to applicant.name, applicant %></li>
+  <li><%= link_to applicant.name, applicant %>,</li>
+  <li><%= applicant.skills %>,</li>
+  <li><%= applicant.education %>,</li>
+  <li><%= applicant.years_exp %>,</li>
+  <li><%= applicant.local %></li>
+  <li>
+    <ul>
+      <li><%= link_to "Edit", edit_applicant_path(applicant) %></li>
+      <li><%= link_to "Delete", applicant_path(applicant), method: :delete %></li>
+    </ul>
+  </li>
   <% end %>
 </ul>
