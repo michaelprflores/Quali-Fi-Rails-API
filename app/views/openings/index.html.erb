@@ -4,10 +4,15 @@
   </ul>
 </nav>
 <h1>All Openings</h1>
+<%= link_to "new opening", new_opening_path %>
 <ul>
   <% @openings.each do |opening| %>
     <li>
       <%= link_to opening.opening_name, opening %>
+      <ul>
+        <li>edit</li>
+        <li>delete</li>
+      </ul>
     </li>
   <% end %>
 </ul>

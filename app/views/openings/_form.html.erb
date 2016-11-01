@@ -1,0 +1,18 @@
+<%= form_for @opening do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :opening_name %>
+
+  <%= f.label :skills %>
+  <%= f.text_field :skills%>
+
+  <%= f.label :education %>
+  <%= f.text_field :education %>
+
+  <%= f.label :years_experience %>
+  <%= f.text_field :years_exp %>
+
+  <%= f.label :local %>
+  <%= f.text_field :local %>
+
+  <%= f.submit %>
+<% end %>
