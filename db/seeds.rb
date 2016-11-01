@@ -21,5 +21,3 @@ combine = OpeningsApplicant.create!({
   opening: full_stack_developer,
   applicant: first_applicant
 })
-
-# combine.destroy
