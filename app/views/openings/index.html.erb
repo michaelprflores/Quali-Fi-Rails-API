@@ -7,7 +7,7 @@
 <%= link_to "new opening", new_opening_path %>
 <ul>
   <% @openings.each do |opening| %>
-  <li><%= opening.opening_name %></li>
+  <li><%= link_to opening.opening_name, opening %></li>
   <li><%= opening.skills %></li>
   <li><%= opening.education %></li>
   <li><%= opening.years_exp %></li>
