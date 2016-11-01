@@ -1,6 +1,11 @@
 class OpeningsController < ApplicationController
   def index
     @openings = Opening.all
+
+    respond_to do |format|
+      format.html { render :index }
+      format.json { render json: @openings }
+    end
   end
 
   def show
