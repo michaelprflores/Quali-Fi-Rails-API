@@ -12,9 +12,15 @@ class OpeningsController < ApplicationController
     end
   end
 
+  def destroy
+    @opening = Opening.find(params[:id])
+    @opening.destroy
+    redirect_to openings_path
+  end
+
   def create
     @opening = Opening.create(opening_params)
-    redirect_to openings_path
+    redirect_to @opening
   end
 
   def new

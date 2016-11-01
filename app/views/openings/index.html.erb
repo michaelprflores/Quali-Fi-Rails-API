@@ -11,7 +11,7 @@
       <%= link_to opening.opening_name, opening %>
       <ul>
         <li>edit</li>
-        <li>delete</li>
+        <li><%= link_to "delete", opening, method: :delete %></li>
       </ul>
     </li>
   <% end %>
