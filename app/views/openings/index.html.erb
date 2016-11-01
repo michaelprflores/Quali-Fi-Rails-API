@@ -10,8 +10,7 @@
     <li>
       <%= link_to opening.opening_name, opening %>
       <ul>
-        <li>edit</li>
-        <li><%= link_to "delete", opening, method: :delete %></li>
+        <li><%= link_to "Edit", edit_opening_path(opening) %></li>
       </ul>
     </li>
   <% end %>

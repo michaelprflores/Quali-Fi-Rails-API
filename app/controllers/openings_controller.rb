@@ -12,11 +12,13 @@ class OpeningsController < ApplicationController
     end
   end
 
-  def destroy
-    @opening = Opening.find(params[:id])
-    @opening.destroy
-    redirect_to openings_path
-  end
+  # def destroy
+  #   @opening = Opening.find(params[:id])
+  #   @opening.destroy
+  #   redirect_to openings_path
+  # end
+
+  # <li><%= link_to "delete", opening, method: :delete %></li>
 
   def create
     @opening = Opening.create(opening_params)
@@ -25,6 +27,16 @@ class OpeningsController < ApplicationController
 
   def new
     @opening = Opening.new
+  end
+
+  def edit
+    @opening = Opening.find(params[:id])
+  end
+
+  def update
+    @opening = Opening.find(params[:id])
+    @opening.update(opening_params)
+    redirect_to @opening
   end
 
   private
