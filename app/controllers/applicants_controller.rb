@@ -1,11 +1,8 @@
 class ApplicantsController < ApplicationController
-
-  # index
   def index
     @applicants = Applicant.all
   end
 
-  # show
   def show
     @applicant = Applicant.find(params[:id])
 

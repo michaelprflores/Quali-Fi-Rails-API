@@ -7,8 +7,12 @@
 <%= link_to "new opening", new_opening_path %>
 <ul>
   <% @openings.each do |opening| %>
+    <li><%= opening.opening_name %></li>
+    <li><%= opening.skills %></li>
+    <li><%= opening.education %></li>
+    <li><%= opening.years_exp %></li>
+    <li><%= opening.local %></li>
     <li>
-      <%= link_to opening.opening_name, opening %>
       <ul>
         <li><%= link_to "Edit", edit_opening_path(opening) %></li>
       </ul>
