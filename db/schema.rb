@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161031182505) do
+ActiveRecord::Schema.define(version: 20161102155146) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,7 +28,6 @@ ActiveRecord::Schema.define(version: 20161031182505) do
     t.string  "skills"
     t.string  "education"
     t.integer "years_exp"
-    t.boolean "local"
   end
 
   create_table "openings_applicants", id: false, force: :cascade do |t|
