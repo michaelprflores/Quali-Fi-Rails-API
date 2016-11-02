@@ -2,19 +2,13 @@ class ApplicantsController < ApplicationController
   def index
     @applicants = Applicant.all
 
-    respond_to do |format|
-      format.html { render :index }
-      format.json { render json: @applicants }
-    end
+    render json: @applicants
   end
 
   def show
     @applicant = Applicant.find(params[:id])
 
-    respond_to do |format|
-      format.html { render :show }
-      format.json { render json: @applicant }
-    end
+    render json: @applicant
   end
 
   def destroy
