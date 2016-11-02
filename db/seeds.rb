@@ -6,7 +6,6 @@ full_stack_developer = Opening.create!({
   skills: ["JavaScript", "Rails"],
   education: "Bachelors Degree",
   years_exp: 5,
-  local: false
 })
 
 first_applicant = Applicant.create!({
@@ -14,7 +13,6 @@ first_applicant = Applicant.create!({
   skills: ["JavaScript", "PHP"],
   education: "Bachelors Degree",
   years_exp: 12,
-  local: true
 })
 
 combine = OpeningsApplicant.create!({
