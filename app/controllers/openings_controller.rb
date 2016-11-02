@@ -14,12 +14,12 @@ class OpeningsController < ApplicationController
   def destroy
     @opening = Opening.find(params[:id])
     @opening.destroy
-    redirect_to openings_path
+    render json: {success: true}
   end
 
   def create
     @opening = Opening.create(opening_params)
-    redirect_to @opening
+    render json: @opening
   end
 
   def new
@@ -33,7 +33,8 @@ class OpeningsController < ApplicationController
   def update
     @opening = Opening.find(params[:id])
     @opening.update(opening_params)
-    redirect_to @opening
+    
+    render json: @opening
   end
 
   private
