@@ -1,5 +1,5 @@
 class RemoveOpeningColumn < ActiveRecord::Migration[5.0]
   def change
-    drop_table :local
+    remove_column :openings, :local
   end
 end
