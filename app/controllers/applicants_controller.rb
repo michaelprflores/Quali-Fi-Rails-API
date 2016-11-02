@@ -39,7 +39,7 @@ class ApplicantsController < ApplicationController
   private
 
   def applicant_params
-    params.require(:applicant).permit(:name, :skills, :education, :years_exp, :local)
+    params.require(:applicant).permit(:name, :skills, :education, :years_exp)
   end
 
 end

@@ -39,6 +39,6 @@ class OpeningsController < ApplicationController
   private
 
   def opening_params
-    params.require(:opening).permit(:opening_name, :skills, :education, :years_exp, :local)
+    params.require(:opening).permit(:opening_name, :skills, :education, :years_exp)
   end
 end
