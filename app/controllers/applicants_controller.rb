@@ -14,12 +14,12 @@ class ApplicantsController < ApplicationController
   def destroy
     @applicant = Applicant.find(params[:id])
     @applicant.destroy
-    redirect_to applicants_path
+    render json: {success: true}
   end
 
   def create
     @applicant = Applicant.create(applicant_params)
-    redirect_to @applicant
+    render json: @applicant
   end
 
   def new
@@ -33,7 +33,7 @@ class ApplicantsController < ApplicationController
   def update
     @applicant = Applicant.find(params[:id])
     @applicant.update(applicant_params)
-    redirect_to @applicant
+    render json: @applicant
   end
 
   private
