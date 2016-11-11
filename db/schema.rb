@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20161102160727) do
 
   create_table "applicants", force: :cascade do |t|
     t.string  "name"
-    t.string  "skills"
+    t.string  "skills"  # AM: I encourage you to revisit making Skill its own model. As your backend becomes more complex, this will make managing skills much easier.
     t.string  "education"
     t.integer "years_exp"
   end

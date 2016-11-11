@@ -14,7 +14,7 @@ class ApplicantsController < ApplicationController
   def destroy
     @applicant = Applicant.find(params[:id])
     @applicant.destroy
-    render json: {success: true}
+    render json: {success: true}  # AM: Nice.
   end
 
   def create
@@ -22,11 +22,11 @@ class ApplicantsController < ApplicationController
     render json: @applicant
   end
 
-  def new
+  def new   # AM: If you're using a front-end to generate a form, do you need this action?
     @applicant = Applicant.new
   end
 
-  def edit
+  def edit  # AM: My previous comment applies here as well.
     @applicant = Applicant.find(params[:id])
   end
 
